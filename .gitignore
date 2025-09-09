@@ -1,0 +1,58 @@
+# Unreal Engine 5.3 project .gitignore
+
+# Build artifacts
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Visual Studio files
+.vscode/
+.vs/
+*.VC.db
+*.VC.opendb
+
+# Unreal Engine auto-generated files
+*.opensdf
+*.sdf
+*.sln
+*.xcodeproj
+*.xcworkspace
+*.xcuserstate
+
+# Plugin intermediate files
+Plugins/*/Intermediate/
+Plugins/*/Binaries/
+
+# Optional: ignore config files if you don't want to track local changes
+# Config/
+
+# Optional: ignore project-specific binaries
+*.exe
+*.dll
+*.lib
+*.app
+*.dylib
+*.so
+
+# Optional: ignore crash reports
+*_CrashContext.runtimexml
+
+# Optional: ignore logs
+*.log
+
+# Optional: ignore backup files
+*.bak
+*.tmp
