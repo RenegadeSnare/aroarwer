@@ -2,34 +2,32 @@
 
 
 #include "Character/AuraCharacterBase.h"
+#include "AbilitySystem/AuraAbilitySystemComponent.h"
 
 
-AAuraCharacterBase::AAuraCharacterBase()
-{
+AAuraCharacterBase::AAuraCharacterBase(){
 	PrimaryActorTick.bCanEverTick = false;
 	Weapon = CreateDefaultSubobject<USkeletalMeshComponent>("Weapon");
 	Weapon->SetupAttachment(GetMesh(), FName("WeaponHandSocket"));
 	Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
-
-
-void AAuraCharacterBase::BeginPlay()
+	UAbilitySystemComponent *AAuraCharacterBase::GetAbilitySystemComponent() const
 {
+	return AbilitySystemComponent;
+}
+
+
+void AAuraCharacterBase::BeginPlay(){
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
-// void AAuraCharacterBase::Tick(float DeltaTime)
-// {
-// 	Super::Tick(DeltaTime);
-//
-// }
-//
+ // void AAuraCharacterBase::Tick(float DeltaTime) {
+	// Super::Tick(DeltaTime);
+ // }
+
 // // Called to bind functionality to input
-// void AAuraCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-// {
-// 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-//
+// void AAuraCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent){
+//  	Super::SetupPlayerInputComponent(PlayerInputComponent);
 // }
 
